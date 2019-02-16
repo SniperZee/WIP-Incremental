@@ -1,0 +1,14 @@
+#version {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #858585;
+}
+
+#version a {
+    color: #1d4beb;
+    text-decoration: none;
+}

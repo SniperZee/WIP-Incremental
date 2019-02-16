@@ -1,0 +1,13 @@
+why didn't i start one of these before?
+
+alright, trying to make it so you don't have to attack again when the monster has less than 0 hp.
+
+gonna put this here real quick
+    console.log("Monster has died.");
+    monster.health = monster.maxHealth;
+    player.gold += monster.goldReward
+
+    monster.health -= player.attack + player.swordLevel
+
+wait why don't i have it check after attacking? but before the text update?
+oh shit that worked

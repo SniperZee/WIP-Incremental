@@ -5,9 +5,14 @@
   <title>WIP Incremental Game.</title>
   <script src="scripts/main.js"></script>
 </head>
-<body>
-  <p id="HP">Monster HP: 10/10</p>
+<body onload="rng()">
+  <p id="monsterHealth">Monster HP: 10/10</p>
   <button onclick="attack()">Attack</button>
   <p id="gold">Gold: 0</p>
+  <p id="swordLevel">Sword Level: 1</p><hr>
+  <p>Shop</p>
+  <button id="swordPrice" onclick="buySword()">Buy new sword for 10 gold</button><br>
+  <p id="shopkeeper">Shopkeeper: Welcome!</p><hr>
+  <button onclick="gimmeGold()">Gimme some gold.</button>
 </body>
 </html>

@@ -11,3 +11,10 @@ gonna put this here real quick
 
 wait why don't i have it check after attacking? but before the text update?
 oh shit that worked
+---
+now i have a health system for the player, and a way to restore it.
+it actually got added with a lot less issues than i thought there'd be.
+
+can I to-do here?
+TODO: Split main.js into separate files
+sweet, main.js is getting kinda crowded.

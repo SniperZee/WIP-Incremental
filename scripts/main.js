@@ -14,20 +14,19 @@ var monster = { //monster stats
   goldReward: 10
 };
 
-function gimmeGold() { //debug
-  player.gold += 100;
-  console.log("Gold has been gimme'd");
-  updateValues();
-}
-
 function attack() { //attacks the monster
   monster.health -= player.attack + player.swordLevel;
   if(monster.health <= 0){ // if the monster has no health, give gold, and bring back the monster
     console.log("Monster has died.");
     monster.health = monster.maxHealth;
     player.gold += monster.goldReward
-  }else{ // if the monster is alive, it'll attack the player TODO: Make something happen if the player dies.
+  }else{ // if the monster is alive, it'll attack the player
     player.health -= monster.attack;
+    if(player.health <= 0){//if the player dies, take half% of their gold
+      console.log("Player has died.");
+      player.gold -= Math.round(player.gold /= 2);
+      player.health = player.maxHealth;
+    }
   }
   updateValues();
 }
@@ -39,6 +38,7 @@ var store = { //store prices
 
 function buySword() { //lets the player upgrade their sword if they have enough gold.
   if (player.gold >= store.swordPrice){
+    console.log("Attempted to buy sword.");
     player.gold -= store.swordPrice;
     player.attack += 1;
     store.swordPrice *= 2; //TODO: find a better way for this to scale.
@@ -52,6 +52,7 @@ function buySword() { //lets the player upgrade their sword if they have enough 
 }
 
 function buyPotion() { //let's the player buy a potion to restore health
+  console.log("Attempted to buy potion.");
   if (player.gold >= store.potionPrice){
     player.gold -= store.potionPrice;
     player.health += 100;
@@ -75,7 +76,20 @@ function updateValues(){ //updates displayed values
 
 var randomNumber = 0;
 
-function rng() { //random number generator
+function rng() { //Random number generator.
   randomNumber = Math.random();
   console.log("Current random number is " + randomNumber);
+}
+
+//DEBUG FUNCTIONS
+function gimmeGold() { //Gives the player some gold.
+  player.gold += 100;
+  console.log("Gold has been gimme'd");
+  updateValues();
+}
+
+function hurtMe() {//brings the player to 1 hp
+  player.health = 1;
+  console.log("Player has been hurt");
+  updateValues();
 }

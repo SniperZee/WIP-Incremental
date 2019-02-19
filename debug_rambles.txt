@@ -18,3 +18,5 @@ it actually got added with a lot less issues than i thought there'd be.
 can I to-do here?
 TODO: Split main.js into separate files
 sweet, main.js is getting kinda crowded.
+---
+splitting into separate files might be more complicated than i thought. probably won't do it too much.

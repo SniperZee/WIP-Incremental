@@ -81,6 +81,8 @@ function rng() { //Random number generator.
   console.log("Current random number is " + randomNumber);
 }
 
+//--------------------------------------------------------------------------------
+
 //DEBUG FUNCTIONS
 function gimmeGold() { //Gives the player some gold.
   player.gold += 100;

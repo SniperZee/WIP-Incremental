@@ -20,3 +20,7 @@ TODO: Split main.js into separate files
 sweet, main.js is getting kinda crowded.
 ---
 splitting into separate files might be more complicated than i thought. probably won't do it too much.
+---
+want to make a name generator, gonna have that be separate for now
+i love it when i have those "fuck it" moments, and my dumb solution actually ends up working
+goddamnit i hate it when it just works. like, i write the thing, and nothing goes wrong?

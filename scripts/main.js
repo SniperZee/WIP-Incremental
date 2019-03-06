@@ -14,6 +14,10 @@ var monster = { //monster stats
   goldReward: 10
 };
 
+function rename() {//lets the player name themselves
+  document.getElementById("playerName").innerText = document.getElementById("newName").value
+}
+
 function attack() { //attacks the monster
   monster.health -= player.attack + player.swordLevel;
   if(monster.health <= 0){ // if the monster has no health, give gold, and bring back the monster
@@ -82,8 +86,8 @@ function rng() { //Random number generator.
 }
 
 //--------------------------------------------------------------------------------
-
 //DEBUG FUNCTIONS
+
 function gimmeGold() { //Gives the player some gold.
   player.gold += 100;
   console.log("Gold has been gimme'd");

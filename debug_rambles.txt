@@ -26,4 +26,10 @@ i love it when i have those "fuck it" moments, and my dumb solution actually end
 goddamnit i hate it when it just works. like, i write the thing, and nothing goes wrong?
 
 wow i haven't touched this in ages
-okay so i split the js files up, but doing it in like the stupidest simpliest way possible right now
+okay so i split the js files up, but doing it in like the stupidest simplest way possible right now
+
+gonna split up the battling as well.
+hey it worked
+
+how the fuck did the monster's level jump up to 2000!!!! when 10 of them died?
+i put my operations in the wrong order whoops

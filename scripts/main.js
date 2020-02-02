@@ -14,6 +14,7 @@ function rename() {//lets the player name themselves
 function updateValues(){ //updates displayed values
   document.getElementById("playerHealth").innerText = "Your HP: " + player.health + "/" + player.maxHealth;
   document.getElementById("monsterHealth").innerText = "Monster HP: " + monster.health + "/" + monster.maxHealth;
+  document.getElementById("monsterCount").innerText = "Monster Level " + monster.level + " (" + monster.count + "/10)";
   document.getElementById("gold").innerText = "Gold: " + player.gold;
   document.getElementById("swordLevel").innerText = "Sword Level: " + player.swordLevel;
   document.getElementById("swordPrice").innerText= "Buy new sword for " + store.swordPrice + " gold";

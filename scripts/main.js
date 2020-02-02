@@ -1,13 +1,14 @@
 var player = { //player stats
-  name: "Hero", //TODO: Let player name themselves
+  name: "Hero",
   health: 100,
   maxHealth: 100,
   attack: 1,
   gold: 0,
-  swordLevel: 0
+  swordLevel: 1
 };
 
 var monster = { //monster stats
+  level: 1,
   health: 10,
   maxHealth: 10,
   attack: 1,
@@ -45,7 +46,8 @@ function buySword() { //lets the player upgrade their sword if they have enough 
     console.log("Attempted to buy sword.");
     player.gold -= store.swordPrice;
     player.attack += 1;
-    store.swordPrice *= 2; //TODO: find a better way for this to scale.
+    player.swordLevel += 1;
+    store.swordPrice = Math.floor(store.swordPrice / 0.8); //TODO: find an even better way for this to scale.
     document.getElementById("shopkeeper").innerText = "Shopkeeper: Thank you! That'll definitely make you deal more damage."
   }else if (randomNumber <= 0.10){ //yes i'm easter egg-ing already
     document.getElementById("shopkeeper").innerText = "Shopkeeper: Sorry " + player.name + ", I can't give credit. Come back when you're a little... Mmmmmm... richer!"
@@ -62,7 +64,7 @@ function buyPotion() { //let's the player buy a potion to restore health
     player.health += 100;
     if (player.health >= player.maxHealth + 1) {
       player.health = player.maxHealth;
-    } //TODO: Have shopkeeper comments in a separate function?
+    }
     document.getElementById("shopkeeper").innerText = "Shopkeeper: Thank you!";
   }else{
     document.getElementById("shopkeeper").innerText = "Shopkeeper: Sorry, you don't have the gold to afford that.";
@@ -74,6 +76,7 @@ function updateValues(){ //updates displayed values
   document.getElementById("playerHealth").innerText = "Your HP: " + player.health + "/" + player.maxHealth;
   document.getElementById("monsterHealth").innerText = "Monster HP: " + monster.health + "/" + monster.maxHealth;
   document.getElementById("gold").innerText = "Gold: " + player.gold;
+  document.getElementById("swordLevel").innerText = "Sword Level: " + player.swordLevel;
   document.getElementById("swordPrice").innerText= "Buy new sword for " + store.swordPrice + " gold";
   rng();
 }
